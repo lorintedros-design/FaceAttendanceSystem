@@ -1,7 +1,11 @@
 .venv/
 .venv-1/
+
+attendance/
+images/
+
 __pycache__/
 *.pyc
-face_encodings.pkl
+
 models/face_encodings.pkl
-attendance/attendance.csvimages/*.jpg
+face_encodings.pkl
