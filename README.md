@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Face Attendance System
 
 A Python-based Face Attendance System that uses a webcam and face recognition to automatically record student attendance.
@@ -40,3 +41,11 @@ FaceAttendanceSystem/
 │
 ├── .gitignore
 └── README.md
+=======
+# FaceAttendanceSystem
+>>>>>>> 1c3cb9da299a5d1c2fb296d17ad40cf2c2399f55
+<<<<<<< HEAD
+Your local README content
+=======
+GitHub README content
+>>>>>>> ...
