@@ -9,3 +9,8 @@ __pycache__/
 
 models/face_encodings.pkl
 face_encodings.pkl
+.venv/
+__pycache__/
+*.pyc
+.env
+attendance.db

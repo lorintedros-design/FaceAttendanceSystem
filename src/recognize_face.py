@@ -1,129 +1,206 @@
+
 import cv2
 import face_recognition
 import pickle
-import csv
-import os
-from datetime import datetime
+import sys
+from pathlib import Path
 
-# Load saved face encodings
-with open("face_encodings.pkl", "rb") as file:
+# ==========================================
+# 1. PROJECT PATH
+# ==========================================
+
+PROJECT_DIR = Path(__file__).resolve().parent.parent
+
+if str(PROJECT_DIR) not in sys.path:
+    sys.path.insert(0, str(PROJECT_DIR))
+
+from src.attendance import mark_attendance
+
+
+# ==========================================
+# 2. LOAD FACE ENCODINGS
+# ==========================================
+
+possible_files = [
+    PROJECT_DIR / "models" / "face_encodings.pkl",
+    PROJECT_DIR / "face_encodings.pkl",
+    PROJECT_DIR / "src" / "face_encodings.pkl"
+]
+
+ENCODING_FILE = next(
+    (path for path in possible_files if path.exists()),
+    None
+)
+
+if ENCODING_FILE is None:
+    raise FileNotFoundError("Face encodings file not found!")
+
+with open(ENCODING_FILE, "rb") as file:
     data = pickle.load(file)
 
 known_faces = data["faces"]
 known_names = data["names"]
 
-# Attendance file
-attendance_file = "attendance/attendance.csv"
-os.makedirs("attendance", exist_ok=True)
-
-# Create attendance file if it doesn't exist
-if not os.path.exists(attendance_file):
-    with open(attendance_file, "w", newline="") as file:
-        writer = csv.writer(file)
-        writer.writerow(["Student ID", "Name", "Date", "Time"])
+print("Face encodings loaded successfully!")
+print("Registered faces:", len(known_names))
 
 
-def mark_attendance(student_name):
+# ==========================================
+# 3. CAMERA SETTINGS
+# ==========================================
 
-    student_id, name = student_name.split("_", 1)
-
-    today = datetime.now().strftime("%Y-%m-%d")
-    current_time = datetime.now().strftime("%H:%M:%S")
-
-    # Check if already marked today
-    with open(attendance_file, "r", newline="") as file:
-        reader = csv.reader(file)
-        next(reader, None)
-
-        for row in reader:
-            if row and row[0] == student_id and row[2] == today:
-                return
-
-    # Add attendance
-    with open(attendance_file, "a", newline="") as file:
-        writer = csv.writer(file)
-        writer.writerow([student_id, name, today, current_time])
-
-    print(f"Attendance marked: {student_id} - {name}")
-
-
-# Open camera
 camera = cv2.VideoCapture(0)
 
-print("Camera started.")
+# Request a reasonable camera resolution
+camera.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
+camera.set(cv2.CAP_PROP_FRAME_HEIGHT, 480)
+
+if not camera.isOpened():
+    print("Could not open camera.")
+    raise SystemExit
+
+print("\nAttendIQ Camera Started")
 print("Look at the camera.")
 print("Press Q to quit.")
 
-while True:
+# Recognition settings
+FRAME_SCALE = 0.25
+PROCESS_EVERY = 2
 
-    success, frame = camera.read()
+frame_count = 0
+processed_students = set()
 
-    if not success:
-        print("Could not read camera.")
-        break
+# Remember the previous recognition results
+face_locations = []
+face_names = []
 
-    # Convert image
-    rgb_frame = cv2.cvtColor(frame, cv2.COLOR_BGR2RGB)
 
-    # Find faces
-    face_locations = face_recognition.face_locations(rgb_frame)
+# ==========================================
+# 4. FACE RECOGNITION LOOP
+# ==========================================
 
-    # Create encodings
-    face_encodings = face_recognition.face_encodings(
-        rgb_frame,
-        face_locations
-    )
+try:
 
-    # Check every detected face
-    for face_encoding, face_location in zip(
-        face_encodings,
-        face_locations
-    ):
+    while True:
 
-        matches = face_recognition.compare_faces(
-            known_faces,
-            face_encoding,
-            tolerance=0.5
+        success, frame = camera.read()
+
+        if not success:
+            print("Could not read camera.")
+            break
+
+        frame_count += 1
+
+        # Process recognition only on selected frames
+        if frame_count % PROCESS_EVERY == 0:
+
+            # Resize frame to 25%
+            small_frame = cv2.resize(
+                frame,
+                (0, 0),
+                fx=FRAME_SCALE,
+                fy=FRAME_SCALE
+            )
+
+            # Convert BGR to RGB
+            rgb_frame = cv2.cvtColor(
+                small_frame,
+                cv2.COLOR_BGR2RGB
+            )
+
+            # Detect faces on smaller frame
+            face_locations = face_recognition.face_locations(
+                rgb_frame,
+                model="hog"
+            )
+
+            # Generate face encodings
+            face_encodings = face_recognition.face_encodings(
+                rgb_frame,
+                face_locations
+            )
+
+            face_names = []
+
+            for face_encoding in face_encodings:
+
+                name = "Unknown"
+
+                if len(known_faces) > 0:
+
+                    face_distances = face_recognition.face_distance(
+                        known_faces,
+                        face_encoding
+                    )
+
+                    best_match_index = face_distances.argmin()
+
+                    if face_distances[best_match_index] <= 0.5:
+
+                        name = known_names[best_match_index]
+
+                        if name not in processed_students:
+
+                            # Attempt attendance recording
+                            mark_attendance(name)
+
+                            processed_students.add(name)
+
+                face_names.append(name)
+
+        # ==================================
+        # 5. DISPLAY RECOGNITION RESULTS
+        # ==================================
+
+        for face_location, name in zip(
+            face_locations,
+            face_names
+        ):
+
+            # Convert small-frame coordinates
+            # back to original-frame coordinates
+            top, right, bottom, left = face_location
+
+            top = int(top / FRAME_SCALE)
+            right = int(right / FRAME_SCALE)
+            bottom = int(bottom / FRAME_SCALE)
+            left = int(left / FRAME_SCALE)
+
+            color = (
+                (0, 255, 0)
+                if name != "Unknown"
+                else (0, 0, 255)
+            )
+
+            cv2.rectangle(
+                frame,
+                (left, top),
+                (right, bottom),
+                color,
+                2
+            )
+
+            cv2.putText(
+                frame,
+                name,
+                (left, max(top - 10, 20)),
+                cv2.FONT_HERSHEY_SIMPLEX,
+                0.8,
+                color,
+                2
+            )
+
+        cv2.imshow(
+            "AttendIQ - Optimized Face Recognition",
+            frame
         )
 
-        name = "Unknown"
+        if cv2.waitKey(1) & 0xFF == ord("q"):
+            break
 
-        if True in matches:
-            index = matches.index(True)
-            name = known_names[index]
+finally:
 
-            # Automatically mark attendance
-            mark_attendance(name)
+    camera.release()
+    cv2.destroyAllWindows()
 
-        # Face position
-        top, right, bottom, left = face_location
-
-        # Draw rectangle
-        cv2.rectangle(
-            frame,
-            (left, top),
-            (right, bottom),
-            (255, 0, 0),
-            2
-        )
-
-        # Display name
-        cv2.putText(
-            frame,
-            name,
-            (left, top - 10),
-            cv2.FONT_HERSHEY_SIMPLEX,
-            0.8,
-            (0, 255, 0),
-            2
-        )
-
-    # Show camera
-    cv2.imshow("Face Attendance System", frame)
-
-    # Press Q to quit
-    if cv2.waitKey(1) & 0xFF == ord("q"):
-        break
-
-camera.release()
-cv2.destroyAllWindows()
+    print("\nAttendIQ Camera Stopped.")

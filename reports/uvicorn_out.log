@@ -1,0 +1,108 @@
+INFO:     127.0.0.1:61981 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56226 - "GET /teacher HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:55099 - "GET /teacher HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51095 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:55099 - "GET /api/students?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:50820 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:57764 - "POST /api/sessions HTTP/1.1" 201 Created
+INFO:     127.0.0.1:57764 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53789 - "POST /api/sessions/39/close HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53789 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:53789 - "POST /api/sessions HTTP/1.1" 201 Created
+INFO:     127.0.0.1:53789 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51691 - "GET /attend HTTP/1.1" 200 OK
+INFO:     127.0.0.1:51691 - "POST /api/sessions/resolve-qr HTTP/1.1" 200 OK
+INFO:     127.0.0.1:61656 - "POST /api/sessions HTTP/1.1" 201 Created
+INFO:     127.0.0.1:61656 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56858 - "POST /api/sessions/41/close HTTP/1.1" 200 OK
+INFO:     127.0.0.1:56858 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:63211 - "GET /health HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /health HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /teacher HTTP/1.1" 401 Unauthorized
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /teacher HTTP/1.1" 401 Unauthorized
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /teacher HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /api/students?limit=500 HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "POST /api/sessions HTTP/1.1" 201 Created
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "GET /attend HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "POST /api/sessions/resolve-qr HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "POST /api/sessions/check-location HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /health HTTP/1.1" 200 OK
+INFO:     127.0.0.1:55296 - "GET /health HTTP/1.1" 200 OK
+ INFO:     127.0.0.1:63021 - "GET /health HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /health HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "POST /api/sessions/42/close HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /teacher HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /api/students?limit=500 HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "POST /api/sessions HTTP/1.1" 201 Created
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "GET /attend HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "POST /api/sessions/resolve-qr HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "POST /api/sessions/check-location HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "POST /api/sessions/verify-face HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "POST /api/sessions/verify-face HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "POST /api/sessions/verify-face HTTP/1.1" 200 OK
+INFO:     127.0.0.1:64799 - "GET /health HTTP/1.1" 200 OK
+ INFO:     127.0.0.1:58253 - "GET /health HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /health HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "GET /attend HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "POST /api/sessions/resolve-qr HTTP/1.1" 404 Not Found
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "POST /api/sessions/43/close HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "POST /api/sessions HTTP/1.1" 201 Created
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "GET /attend HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "POST /api/sessions/resolve-qr HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "POST /api/sessions/check-location HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "POST /api/sessions/verify-face HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "POST /api/sessions/verify-face HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "GET /attend HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "GET /teacher HTTP/1.1" 401 Unauthorized
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "GET /teacher HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "GET /api/students?limit=500 HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "POST /api/students/1003/face-photo HTTP/1.1" 422 Unprocessable Entity
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "POST /api/sessions/44/close HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "POST /api/students/1003/face-photo HTTP/1.1" 422 Unprocessable Entity
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "POST /api/students/1003/face-photo HTTP/1.1" 422 Unprocessable Entity
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "POST /api/sessions HTTP/1.1" 201 Created
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "GET /attend HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "POST /api/sessions/resolve-qr HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "POST /api/sessions/check-location HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:a833:ed51:9381:9518:0 - "POST /api/sessions/verify-face HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /teacher HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /api/students?limit=500 HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "POST /api/sessions/45/close HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     127.0.0.1:62477 - "GET /health HTTP/1.1" 200 OK
+ INFO:     127.0.0.1:62884 - "GET /health HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:1f3:722d:d8b0:7946:0 - "GET /attend HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /teacher HTTP/1.1" 401 Unauthorized
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /teacher HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /api/students?limit=500 HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "POST /api/sessions HTTP/1.1" 201 Created
+INFO:     2406:7400:ce:1fe:6d10:e5f0:6330:7a01:0 - "GET /api/sessions HTTP/1.1" 200 OK
+INFO:     106.51.173.154:0 - "GET /attend HTTP/1.1" 200 OK
+INFO:     106.51.173.154:0 - "POST /api/sessions/resolve-qr HTTP/1.1" 200 OK
+INFO:     106.51.173.154:0 - "POST /api/sessions/check-location HTTP/1.1" 200 OK
+INFO:     106.51.173.154:0 - "POST /api/sessions/verify-face HTTP/1.1" 200 OK
+   INFO:     127.0.0.1:64705 - "GET /teacher HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:59394 - "GET /teacher HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:59394 - "GET /teacher HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:59394 - "GET /teacher HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:60700 - "GET /teacher HTTP/1.1" 401 Unauthorized
+INFO:     127.0.0.1:49693 - "GET /teacher HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49693 - "GET /api/students?limit=500 HTTP/1.1" 200 OK
+INFO:     127.0.0.1:49693 - "GET /favicon.ico HTTP/1.1" 404 Not Found
+INFO:     127.0.0.1:60772 - "GET /api/sessions HTTP/1.1" 200 OK
+                             

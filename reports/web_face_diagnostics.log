@@ -1,0 +1,17 @@
+2026-11-04 10:35:45,830 WARNING AttendIQ web face verification rejected: expected_one_face_per_frame
+2026-11-04 10:36:11,501 WARNING AttendIQ web face verification rejected: blink_not_detected
+2026-11-04 10:37:12,433 WARNING AttendIQ web face verification rejected: face_did_not_match_registered_student
+2026-11-04 12:09:33,893 WARNING AttendIQ web face verification rejected: expected_one_face_per_frame
+2026-11-04 13:31:16,965 WARNING AttendIQ web face verification rejected: expected_one_face_per_frame
+2026-11-04 19:42:37,869 WARNING AttendIQ web face verification rejected: expected_one_face_per_frame
+2026-11-04 19:42:45,421 WARNING AttendIQ web face verification rejected: expected_one_face_per_frame
+2026-11-04 19:42:52,913 WARNING AttendIQ web face verification rejected: expected_one_face_per_frame
+2026-11-04 20:00:16,652 WARNING AttendIQ web face verification rejected: expected_one_face_per_frame
+2026-11-04 20:00:37,995 WARNING AttendIQ web face verification rejected: expected_one_face_per_frame
+2026-11-04 20:02:30,310 WARNING AttendIQ web face verification rejected: expected_one_face_per_frame
+2026-11-05 02:21:40,905 WARNING AttendIQ web face verification rejected: blink_not_detected
+2026-11-05 02:22:16,851 WARNING AttendIQ web face verification rejected: blink_not_detected
+2026-11-05 02:23:42,660 WARNING AttendIQ web face verification rejected: blink_not_detected
+2026-11-05 11:00:52,480 WARNING AttendIQ web face verification rejected: expected_one_face_per_frame_count_0
+2026-11-05 11:42:49,848 WARNING AttendIQ web face verification rejected: expected_one_face_per_frame_count_0
+2026-11-05 11:43:21,936 WARNING AttendIQ web face verification rejected: expected_one_face_per_frame_count_0

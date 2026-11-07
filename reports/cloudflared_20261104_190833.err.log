@@ -1,0 +1,112 @@
+2026-11-04T13:38:33Z INF Thank you for trying Cloudflare Tunnel. Doing so, without a Cloudflare account, is a quick way to experiment and try it out. However, be aware that these account-less Tunnels have no uptime guarantee, are subject to the Cloudflare Online Services Terms of Use (https://www.cloudflare.com/website-terms/), and Cloudflare reserves the right to investigate your use of Tunnels for violations of such terms. If you intend to use Tunnels in production you should use a pre-created named tunnel by following: https://developers.cloudflare.com/cloudflare-one/connections/connect-apps
+2026-11-04T13:38:33Z INF Requesting new quick Tunnel on trycloudflare.com...
+2026-11-04T13:38:39Z INF +--------------------------------------------------------------------------------------------+
+2026-11-04T13:38:39Z INF |  Your quick Tunnel has been created! Visit it at (it may take some time to be reachable):  |
+2026-11-04T13:38:39Z INF |  https://programs-learned-warcraft-borders.trycloudflare.com                               |
+2026-11-04T13:38:39Z INF +--------------------------------------------------------------------------------------------+
+2026-11-04T13:38:39Z INF Cannot determine default configuration path. No file [config.yml config.yaml] in [~/.cloudflared ~/.cloudflare-warp ~/cloudflare-warp]
+2026-11-04T13:38:39Z INF Version 2026.10.7 (Checksum 2493dbc168923bb3e59e5e7716f71deced92992eea9acd6e9d74f84ac7751343)
+2026-11-04T13:38:39Z INF GOOS: windows, GOVersion: go1.27.3, GoArch: amd64
+2026-11-04T13:38:39Z INF Settings: map[ha-connections:1 protocol:quic url:http://127.0.0.1:8000]
+2026-11-04T13:38:39Z INF cloudflared will not automatically update on Windows systems.
+2026-11-04T13:38:39Z INF Generated Connector ID: 2fe46c23-ebbc-497c-a1e2-0f6ad7fd2a1a
+2026-11-04T13:38:39Z INF Initial protocol quic
+2026-11-04T13:38:39Z INF ICMP proxy will use 192.168.0.5 as source for IPv4
+2026-11-04T13:38:39Z INF ICMP proxy will use 2406:7400:ce:1fe:b902:4364:469e:ef8c in zone Wi-Fi as source for IPv6
+2026-11-04T13:38:39Z INF cloudflared does not support loading the system root certificate pool on Windows. Please use --origin-ca-pool <PATH> to specify the path to the certificate pool
+2026-11-04T13:38:39Z INF ICMP proxy will use 192.168.0.5 as source for IPv4
+2026-11-04T13:38:39Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveID(65074) CurveP256] connIndex=0 event=0 ip=2606:4700:a8::1
+2026-11-04T13:38:39Z INF ICMP proxy will use 2406:7400:ce:1fe:b902:4364:469e:ef8c in zone Wi-Fi as source for IPv6
+2026-11-04T13:38:39Z INF Starting metrics server on 127.0.0.1:20241/metrics
+2026-11-04T13:38:40Z INF +-------------------------------------------------------------------------------------+
+2026-11-04T13:38:40Z INF |                               CONNECTIVITY PRE-CHECKS                               |
+2026-11-04T13:38:40Z INF +-------------------------------------------------------------------------------------+
+2026-11-04T13:38:40Z INF |  COMPONENT         TARGET                     STATUS  DETAILS                       |
+2026-11-04T13:38:40Z INF |  DNS Resolution    region1.v2.argotunnel.com  PASS    DNS Resolved successfully     |
+2026-11-04T13:38:40Z INF |  DNS Resolution    region2.v2.argotunnel.com  PASS    DNS Resolved successfully     |
+2026-11-04T13:38:40Z INF |  UDP Connectivity  region1.v2.argotunnel.com  PASS    QUIC connection successful    |
+2026-11-04T13:38:40Z INF |  UDP Connectivity  region2.v2.argotunnel.com  PASS    QUIC connection successful    |
+2026-11-04T13:38:40Z INF |  TCP Connectivity  region1.v2.argotunnel.com  PASS    HTTP/2 connection successful  |
+2026-11-04T13:38:40Z INF |  TCP Connectivity  region2.v2.argotunnel.com  PASS    HTTP/2 connection successful  |
+2026-11-04T13:38:40Z INF |  Cloudflare API    api.cloudflare.com:443     PASS    API is reachable              |
+2026-11-04T13:38:40Z INF |                                                                                     |
+2026-11-04T13:38:40Z INF |  SUMMARY: Environment is healthy. cloudflared will use 'quic' as primary protocol.  |
+2026-11-04T13:38:40Z INF +-------------------------------------------------------------------------------------+
+2026-11-04T13:38:40Z INF precheck component="DNS Resolution" details="DNS Resolved successfully" run_id=822fba44-410a-473e-8784-9f86e53e45f9 status=pass target=region1.v2.argotunnel.com
+2026-11-04T13:38:40Z INF precheck component="DNS Resolution" details="DNS Resolved successfully" run_id=822fba44-410a-473e-8784-9f86e53e45f9 status=pass target=region2.v2.argotunnel.com
+2026-11-04T13:38:40Z INF precheck component="UDP Connectivity" details="QUIC connection successful" run_id=822fba44-410a-473e-8784-9f86e53e45f9 status=pass target=region1.v2.argotunnel.com
+2026-11-04T13:38:40Z INF precheck component="UDP Connectivity" details="QUIC connection successful" run_id=822fba44-410a-473e-8784-9f86e53e45f9 status=pass target=region2.v2.argotunnel.com
+2026-11-04T13:38:40Z INF precheck component="TCP Connectivity" details="HTTP/2 connection successful" run_id=822fba44-410a-473e-8784-9f86e53e45f9 status=pass target=region1.v2.argotunnel.com
+2026-11-04T13:38:40Z INF precheck component="TCP Connectivity" details="HTTP/2 connection successful" run_id=822fba44-410a-473e-8784-9f86e53e45f9 status=pass target=region2.v2.argotunnel.com
+2026-11-04T13:38:40Z INF precheck component="Cloudflare API" details="API is reachable" run_id=822fba44-410a-473e-8784-9f86e53e45f9 status=pass target=api.cloudflare.com:443
+2026-11-04T13:38:40Z INF precheck complete hard_fail=false run_id=822fba44-410a-473e-8784-9f86e53e45f9 suggested_protocol=quic
+2026-11-04T13:38:40Z INF Registered tunnel connection connIndex=0 connection=de0357d1-ccd9-4a84-a23f-0d9fa7910715 event=0 ip=2606:4700:a8::1 location=bom08 protocol=quic
+2026-11-04T13:48:44Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T13:53:49Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T13:58:54Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T14:14:00Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T14:29:05Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T14:34:10Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T14:44:15Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T14:49:20Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T14:54:25Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T14:59:30Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T15:14:35Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T15:29:40Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T15:34:45Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T15:39:50Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T15:44:55Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T15:50:00Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T15:55:05Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T16:00:10Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T16:10:15Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T16:20:20Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T16:30:25Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T16:35:30Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T16:40:35Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T16:50:40Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T17:00:45Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T17:05:50Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T17:10:55Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T17:21:00Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T17:41:05Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T17:51:10Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T17:56:15Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T18:06:20Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T18:11:25Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T18:16:30Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T18:21:35Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T18:26:40Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T18:36:45Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T18:41:50Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T18:46:55Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T18:52:00Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T18:57:05Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T19:02:10Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T19:07:15Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T19:17:20Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T19:22:25Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T19:27:30Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T19:32:35Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T19:37:40Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T19:42:45Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T19:47:50Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T19:52:55Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T19:58:00Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T20:08:05Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T20:13:10Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T20:18:15Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T20:33:21Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T20:38:26Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T20:39:36Z ERR Serve tunnel error error="accept stream listener error: failed to accept QUIC stream: timeout: no recent network activity" connIndex=0 event=0 ip=2606:4700:a8::1
+2026-11-04T20:39:36Z INF Retrying connection in up to 2s connIndex=0 event=0 ip=2606:4700:a8::1
+2026-11-04T20:39:38Z INF Tunnel connection curve preferences: [X25519MLKEM768 CurveID(65074) CurveP256] connIndex=0 event=0 ip=2606:4700:a0::9
+2026-11-04T20:39:38Z INF Registered tunnel connection connIndex=0 connection=7239141f-4b06-472e-a4c4-79210153b4de event=0 ip=2606:4700:a0::9 location=maa06 protocol=quic
+2026-11-04T20:48:31Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T20:53:36Z ERR Failed to refresh DNS local resolver error="lookup region1.v2.argotunnel.com: i/o timeout"
+2026-11-04T21:02:41Z INF Initiating graceful shutdown due to signal terminated ...
+2026-11-04T21:02:41Z INF Retrying connection in up to 2s connIndex=0 event=0 ip=2606:4700:a0::9
+2026-11-04T21:02:41Z ERR Connection terminated connIndex=0
+2026-11-04T21:02:41Z ERR no more connections active and exiting
+2026-11-04T21:02:41Z INF Tunnel server stopped
+2026-11-04T21:02:41Z INF Metrics server stopped
